@@ -1,0 +1,170 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* font-size: 62.5%; */
+}
+
+.container{
+    display: flex;
+}
+
+.person-information{
+    width: 50%;
+    max-height: 100vh;
+    
+}
+
+.x{
+    display: none;
+}
+
+.person-information-containt{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.pdf-information{
+    width: 50%;
+    background-color: #FAFAFA;
+    height: 100vh;
+}
+
+.personal-details{
+    display: flex;
+    padding-left: 5%;
+    width: 95%;
+    justify-content: space-between;
+    padding-top: 3%;
+    
+}
+
+.personal-containt{
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    justify-content: space-between;
+    padding-top: 10%;
+}
+
+.btn-information{
+    width: 6%;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+
+
+.personal-photo{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+}
+
+.upload-photo{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 5px;
+    background-color: #FAFAFA;
+    
+}
+
+.person-name{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 14px;
+    height: 70px;
+}
+
+.name{
+    height: 44%;
+}
+
+.person-container{
+    width: 100%;
+    padding: 1%;
+}
+
+.person-first-last-name{
+    display: flex;
+}
+
+.person-email{
+    display: flex;
+    flex-direction: column;
+    padding-left: 14px;
+    height: 70px;
+}
+
+.important-information{
+    width: 90%;
+    margin: 0 auto;
+    height: 20rem;
+}
+
+.important-information-containt{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+}
+
+.input-information{
+    height: 2rem;
+}
+
+.template{
+    width: 70%;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: #ffff;
+    margin-top: 7%;
+}
+
+.header-template{
+    width: 100%;
+    background-color: #303846;
+    display: flex;
+}
+
+.cv-image{
+    width: 11.2rem;
+    height: 11.2rem;
+}
+
+.header-container{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3rem;
+    color: #c2c3c5;
+}
+
+.first-and-last-name{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.information-containt{
+    display: flex;
+    padding-top: 0.2rem;
+    font-size: 0.9rem;
+    color: #a7a6a6;
+}
+
+.information-containt p{
+    padding-left: 1rem;
+}
+
+.test{
+    padding-left: 1rem;
+}
+
+.simple-line-icons{
+    display: none;
+}
+
+

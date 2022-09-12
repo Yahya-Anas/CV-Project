@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>CV Project</title>
+</head>
+<body>
+    <main class="container">
+        <section class="person-information">
+            <div class="person-information-containt">
+                <div class="personal-containt">
+                    <h3>Personal details</h3>
+                    <button class="btn-information" onclick="createPersonalDetails()">
+                        <span id="span-icon">&#8744;</span>
+                    </button> 
+                </div>
+                <form id="personal-details" class="x" onsubmit="return false">
+                    <div class="personal-details">
+                        <div class="personal-photo">
+                            <label>Photo</label>
+                            <button class="upload-photo">upload photo</button>
+                        </div>
+                        <div class="person-container">
+                            <div class="person-first-last-name">
+                                <div class="person-name">
+                                    <label>First Name</label>
+                                    <input id="first-name-value" type="text" class="name" onchange="crateFirstName()">
+                                </div>
+                                <div class="person-name">
+                                    <label>last Name</label>
+                                    <input id="last-name-value" type="text" class="name" onchange="cratelastName()">
+                                </div>
+                            </div>
+                            
+                            <div class="person-email">
+                                <label>E-mail</label>
+                                <input id="email-value" type="email" class="email name" onchange="crateEmail()">
+                            </div> 
+                        </div>
+                    </div>
+                
+                    <div class="important-information">
+                        <div class="important-information-containt">
+                            <label>Phone Number</label>
+                            <input id="phone-value" type="text" class="input-information" onchange="cratePhone()">
+                        </div>
+                        <div class="important-information-containt">
+                            <label>Address</label>
+                            <input id="address-value" type="text" class="input-information" onchange="crateAddress()">
+                        </div>
+                        <div class="important-information-containt">
+                            <label>Post Code</label>
+                            <input id="post-code-value" type="text" class="input-information" onchange="cratePostCode()">
+                        </div>
+                        <div class="important-information-containt">
+                            <label>City</label>
+                            <input id="city-value" type="text" class="input-information" onchange="crateCity()">
+                        </div>
+                        <div class="important-information-containt">
+                            <label>Date of birth</label>
+                            <input type="date" class="input-information" >
+                        </div>
+                        <div class="important-information-containt">
+                            <label>Driver's license</label>
+                            <input type="text" class="input-information" >
+                        </div>
+                </div>
+                    
+                </form>
+            </div>
+            
+            
+        </section>
+        <section class="pdf-information">
+            <!-- <p id="display-first-name"></p> -->
+            <div class="template">
+                <div class="header-template">
+                    <img src="../1 - PicturePeople Bochum-001 2.jpg" alt="dddd" class="cv-image">
+                    <div class="header-container">
+                        <div class="first-and-last-name">
+                            <h3 id="display-first-name"></h3>
+                            <h3 id="display-last-name"></h3>
+                        </div>
+                        <div class="information-containt">
+                            <iconify-icon id="simple-line-icons-email" class="simple-line-icons" icon="simple-line-icons:envolope"></iconify-icon>
+                            <p id="email"></p>
+                        </div>
+                        <div class="information-containt">
+                            <iconify-icon id="simple-line-icons-phone" class="simple-line-icons" icon="simple-line-icons:call-end"></iconify-icon>
+                            <p id="phone"></p>
+                        </div>
+                        
+                        <div class="information-containt">
+                            <iconify-icon id="simple-line-icons-location" class="simple-line-icons"  icon="simple-line-icons:location-pin"></iconify-icon>
+                            <p id="address"></p>  
+                        </div>
+                        <div class="information-containt test">
+                            <p id="postCode"></p>
+                            <p id="city"></p>
+                        </div>
+                                             
+                        <div class="information-containt">
+                            <iconify-icon icon="simple-line-icons:calender"></iconify-icon>
+                            <p>12.01.1989</p>
+                        </div>
+                        <div class="information-containt">
+                            <i class="fa fa-car"></i>
+                            <p>yes</p>  
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+   
+
+    
+    <script src="main.js"></script>
+   
+</body>
+</html>
