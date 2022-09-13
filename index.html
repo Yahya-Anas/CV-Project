@@ -23,8 +23,16 @@
                 <form id="personal-details" class="x" onsubmit="return false">
                     <div class="personal-details">
                         <div class="personal-photo">
-                            <label>Photo</label>
-                            <button class="upload-photo">upload photo</button>
+                            <label for="image-input">
+                                Photo
+                                <div class="upload-photo">
+                                    Upload Photo
+                                    <input class="input-file"  type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
+                                </div>
+                                
+                            </label>
+                            
+                            <!-- <button class="upload-photo" onclick="test()">upload photo</button> -->
                         </div>
                         <div class="person-container">
                             <div class="person-first-last-name">
@@ -64,11 +72,11 @@
                         </div>
                         <div class="important-information-containt">
                             <label>Date of birth</label>
-                            <input type="date" class="input-information" >
+                            <input id="date-value" type="date" class="input-information" onchange="crateDate()" >
                         </div>
                         <div class="important-information-containt">
                             <label>Driver's license</label>
-                            <input type="text" class="input-information" >
+                            <input id="driver-lincens-value" type="text" class="input-information"  onchange="crateDriverLincens()">
                         </div>
                 </div>
                     
@@ -81,7 +89,9 @@
             <!-- <p id="display-first-name"></p> -->
             <div class="template">
                 <div class="header-template">
-                    <img src="../1 - PicturePeople Bochum-001 2.jpg" alt="dddd" class="cv-image">
+                    <!-- <div id="app" class="cv-image"></div> -->
+                    <!-- <img id="img" src="../1 - PicturePeople Bochum-001 2.jpg" alt="dddd" class="cv-image"> -->
+                    <div id="display-image" class="cv-image"></div>
                     <div class="header-container">
                         <div class="first-and-last-name">
                             <h3 id="display-first-name"></h3>
@@ -106,19 +116,21 @@
                         </div>
                                              
                         <div class="information-containt">
-                            <iconify-icon icon="simple-line-icons:calender"></iconify-icon>
-                            <p>12.01</p>
+                            <iconify-icon id="simple-line-icons-date" class="simple-line-icons" icon="simple-line-icons:calender"></iconify-icon>
+                            <p id="date"></p>
                         </div>
                         <div class="information-containt">
-                            <i class="fa fa-car"></i>
-                            <p>yes</p>  
+                            <i id="simple-line-icons-driver-license" class="fa fa-car simple-line-icons"></i>
+                            <p id="driver-license"></p>  
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     </main>
+
+   
+   
    
 
     

@@ -70,7 +70,13 @@ body{
     height: 7rem;
     border-radius: 5px;
     background-color: #FAFAFA;
+    text-align: center;
+    padding-top: 38%;
     
+}
+
+.upload-photo:hover{
+    cursor: pointer;
 }
 
 .person-name{
@@ -131,10 +137,7 @@ body{
     display: flex;
 }
 
-.cv-image{
-    width: 11.2rem;
-    height: 11.2rem;
-}
+
 
 .header-container{
     display: flex;
@@ -167,4 +170,14 @@ body{
     display: none;
 }
 
+.cv-image{
+    width: 11.2rem;
+    height: 11.2rem;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .input-file{
+    display: none;
+  }
 

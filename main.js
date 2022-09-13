@@ -10,6 +10,11 @@ const locationIcon = document.getElementById("simple-line-icons-location")
 const address = document.getElementById("address")
 const postCode = document.getElementById("postCode")
 const city = document.getElementById("city")
+const dateIcon = document.getElementById("simple-line-icons-date")
+const date = document.getElementById("date")
+const driverLincensIcon = document.getElementById("simple-line-icons-driver-license")
+const driverLincen = document.getElementById("driver-license")
+
 
 
 
@@ -145,3 +150,37 @@ let crateCity = () =>{
         city.innerHTML = cityValue
     }
 }
+
+let crateDate = () =>{
+    let dateValue = document.getElementById("date-value").value
+    if(dateValue === ""){
+        dateIcon.style.display = "none"
+        date.innerHTML = dateValue
+    }else{
+        dateIcon.style.display = "block"
+        date.innerHTML = dateValue
+    }
+}
+
+let crateDriverLincens = () =>{
+    let driverLincenValue = document.getElementById("driver-lincens-value").value
+    if(driverLincenValue === ""){
+        driverLincenValue.style.display = "none"
+        driverLincen.innerHTML = driverLincenValue
+    }else{
+        driverLincensIcon.style.display = "block"
+        driverLincen.innerHTML = driverLincenValue
+    }
+}
+
+
+const image_input = document.getElementById("image-input");
+image_input.addEventListener("change", function() {
+    const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    const uploaded_image = reader.result;
+    document.querySelector("#display-image").style.backgroundImage = `url(${uploaded_image})`;
+  });
+  reader.readAsDataURL(this.files[0]);
+  
+});
