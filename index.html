@@ -12,79 +12,127 @@
 </head>
 <body>
     <main class="container">
-        <section class="person-information">
-            <div class="person-information-containt">
-                <div class="personal-containt">
-                    <h3>Personal details</h3>
-                    <button class="btn-information" onclick="createPersonalDetails()">
-                        <span id="span-icon">&#8744;</span>
-                    </button> 
-                </div>
-                <form id="personal-details" class="x" onsubmit="return false">
-                    <div class="personal-details">
-                        <div class="personal-photo">
-                            <label for="image-input">
-                                Photo
-                                <div class="upload-photo">
-                                    Upload Photo
-                                    <input class="input-file"  type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
+        <div class="main-container">
+            <section class="person-information">
+                <div class="person-information-containt">
+                    <div class="personal-containt">
+                        <h3>Personal details</h3>
+                        <button class="btn-information" onclick="createPersonalDetails()">
+                            <span id="span-icon">&#8744;</span>
+                        </button> 
+                    </div>
+                    <form id="personal-details" class="p-details" onsubmit="return false">
+                        <div class="personal-details">
+                            <div class="personal-photo">
+                                <label for="image-input">
+                                    Photo
+                                    <div class="upload-photo">
+                                        Upload Photo
+                                        <input class="input-file"  type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
+                                    </div>
+                                    
+                                </label>
+                                
+                                <!-- <button class="upload-photo" onclick="test()">upload photo</button> -->
+                            </div>
+                            <div class="person-container">
+                                <div class="person-first-last-name">
+                                    <div class="person-name">
+                                        <label>First Name</label>
+                                        <input id="first-name-value" type="text" class="name" onchange="crateFirstName()">
+                                    </div>
+                                    <div class="person-name">
+                                        <label>last Name</label>
+                                        <input id="last-name-value" type="text" class="name" onchange="cratelastName()">
+                                    </div>
                                 </div>
                                 
-                            </label>
-                            
-                            <!-- <button class="upload-photo" onclick="test()">upload photo</button> -->
+                                <div class="person-email">
+                                    <label>E-mail</label>
+                                    <input id="email-value" type="email" class="email name" onchange="crateEmail()">
+                                </div> 
+                            </div>
                         </div>
-                        <div class="person-container">
-                            <div class="person-first-last-name">
-                                <div class="person-name">
-                                    <label>First Name</label>
+                    
+                        <div class="important-information">
+                            <div class="important-information-containt">
+                                <label>Phone Number</label>
+                                <input id="phone-value" type="tel" class="input-information" onchange="cratePhone()">
+                            </div>
+                            <div class="important-information-containt">
+                                <label>Address</label>
+                                <input id="address-value" type="text" class="input-information" onchange="crateAddress()">
+                            </div>
+                            <div class="important-information-containt">
+                                <label>Post Code</label>
+                                <input id="post-code-value" type="text" class="input-information" onchange="cratePostCode()">
+                            </div>
+                            <div class="important-information-containt">
+                                <label>City</label>
+                                <input id="city-value" type="text" class="input-information" onchange="crateCity()">
+                            </div>
+                            <div class="important-information-containt">
+                                <label>Date of birth</label>
+                                <input id="date-value" type="date" class="input-information" onchange="crateDate()" >
+                            </div>
+                            <div class="important-information-containt">
+                                <label>Driver's license</label>
+                                <input id="driver-lincens-value" type="text" class="input-information"  onchange="crateDriverLincens()">
+                            </div>
+                    </div>    
+                    </form>
+                </div> 
+            </section>
+            <div class="line-style"></div>
+            <section class="person-information">
+                <div class="person-information-containt">
+                    <div class="personal-containt">
+                        <h3>Education</h3>
+                        <button class="btn-information" onclick="createPersonalEducation()">
+                            <span id="span-education-icon">&#8744;</span>
+                        </button> 
+                    </div>
+                    <form id="education-details" class="education-form e-details" onsubmit="return false">
+                        <div class="important-information">
+                            <div class="important-information-containt">
+                                <label>Education</label>
+                                <input id="education-value" type="text" class="input-information" onchange="crateEducation()">
+                            </div>
+                            <div class="person-educatin-container">
+                                <div class="person-educatin">
+                                    <label>School</label>
                                     <input id="first-name-value" type="text" class="name" onchange="crateFirstName()">
                                 </div>
-                                <div class="person-name">
-                                    <label>last Name</label>
+                                <div class="person-educatin">
+                                    <label>City</label>
                                     <input id="last-name-value" type="text" class="name" onchange="cratelastName()">
                                 </div>
                             </div>
-                            
-                            <div class="person-email">
-                                <label>E-mail</label>
-                                <input id="email-value" type="email" class="email name" onchange="crateEmail()">
-                            </div> 
-                        </div>
-                    </div>
-                
-                    <div class="important-information">
-                        <div class="important-information-containt">
-                            <label>Phone Number</label>
-                            <input id="phone-value" type="text" class="input-information" onchange="cratePhone()">
-                        </div>
-                        <div class="important-information-containt">
-                            <label>Address</label>
-                            <input id="address-value" type="text" class="input-information" onchange="crateAddress()">
-                        </div>
-                        <div class="important-information-containt">
-                            <label>Post Code</label>
-                            <input id="post-code-value" type="text" class="input-information" onchange="cratePostCode()">
-                        </div>
-                        <div class="important-information-containt">
-                            <label>City</label>
-                            <input id="city-value" type="text" class="input-information" onchange="crateCity()">
-                        </div>
-                        <div class="important-information-containt">
-                            <label>Date of birth</label>
-                            <input id="date-value" type="date" class="input-information" onchange="crateDate()" >
-                        </div>
-                        <div class="important-information-containt">
-                            <label>Driver's license</label>
-                            <input id="driver-lincens-value" type="text" class="input-information"  onchange="crateDriverLincens()">
-                        </div>
+                            <div class="person-educatin-container">
+                                <div class="person-educatin">
+                                    <label>Start date</label>
+                                    <input id="start-year-value" type="month" class="name" onchange="crateFirstName()">
+                                </div>
+                                <div class="person-educatin">
+                                    <label>End date</label>
+                                    <input id="end-year-value" type="month" class="name" onchange="cratelastName()">
+                                </div>
+                            </div>
+                            <div class="important-information-containt">
+                                <label>Decription</label>
+                                <textarea id="Decription-value" type="text" class="input-Description"  onchange="crateDriverLincens()">
+                                </textarea>
+                            </div>
+                            <div class="btn-done">
+                                <button>Done</button>
+                            </div>
+                        </div>    
+                    </form>
                 </div>
-                    
-                </form>
-            </div>
-            
-            
-        </section>
+            </section>
+            <div class="line-style"></div>
+        </div>
+     
         <section class="pdf-information">
             <!-- <p id="display-first-name"></p> -->
             <div class="template">

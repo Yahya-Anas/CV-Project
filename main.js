@@ -1,3 +1,5 @@
+// Personal Details Variable
+
 const personalDetails = document.getElementById("personal-details");
 const spanIcon = document.getElementById("span-icon");
 const displayFirstName = document.getElementById("display-first-name")
@@ -15,66 +17,20 @@ const date = document.getElementById("date")
 const driverLincensIcon = document.getElementById("simple-line-icons-driver-license")
 const driverLincen = document.getElementById("driver-license")
 
+// Educatin Detaile Variable
+
+const educationDetails = document.getElementById("education-details")
+const spanEducationIcon = document.getElementById("span-education-icon")
+
+
 
 
 
 let x = "true"
 let createPersonalDetails = () =>{
-    personalDetails.classList.toggle('x')
+    personalDetails.classList.toggle('p-details')
     if(x === "true" ){
         personalDetails.style.display = "block"
-    //     let informationDetails = `
-    //     <div class="personal-details">
-    //         <div class="personal-photo">
-    //             <label>Photo</label>
-    //             <button class="upload-photo">upload photo</button>
-    //         </div>
-    //         <div class="person-container">
-    //             <div class="person-first-last-name">
-    //                 <div class="person-name">
-    //                     <label>First Name</label>
-    //                     <input id="first-name-value" type="text" class="name" onchange="crateFirstName()">
-    //                 </div>
-    //                 <div class="person-name">
-    //                     <label>last Name</label>
-    //                     <input type="text" class="name">
-    //                 </div>
-    //             </div>
-                
-    //             <div class="person-email">
-    //                 <label>E-mail</label>
-    //                 <input type="email" class="email name" >
-    //             </div> 
-    //         </div>
-    //     </div>
-    
-    //     <div class="important-information">
-    //         <div class="important-information-containt">
-    //             <label>Phone Number</label>
-    //             <input type="text" class="input-information" >
-    //         </div>
-    //         <div class="important-information-containt">
-    //             <label>Address</label>
-    //             <input type="text" class="input-information" >
-    //         </div>
-    //         <div class="important-information-containt">
-    //             <label>Post Code</label>
-    //             <input type="text" class="input-information" >
-    //         </div>
-    //         <div class="important-information-containt">
-    //             <label>City</label>
-    //             <input type="text" class="input-information" >
-    //         </div>
-    //         <div class="important-information-containt">
-    //             <label>Date of birth</label>
-    //             <input type="date" class="input-information" >
-    //         </div>
-    //         <div class="important-information-containt">
-    //             <label>Driver's license</label>
-    //             <input type="text" class="input-information" >
-    //         </div>
-    // </div>`
-    //     personalDetails.innerHTML = informationDetails;
         spanIcon.innerHTML = `<span>&#8743;</span>`
         x = "false"
         console.log(x)
@@ -184,3 +140,19 @@ image_input.addEventListener("change", function() {
   reader.readAsDataURL(this.files[0]);
   
 });
+
+let educationsDetails = "true"
+let createPersonalEducation = () =>{
+    educationDetails.classList.toggle('e-details')
+    if(educationsDetails === "true" ){
+        educationDetails.style.display = "block"
+        spanEducationIcon.innerHTML = `<span>&#8743;</span>`
+        educationsDetails = "false"
+        console.log(educationsDetails)
+    }else if(educationsDetails === "false"){
+        spanEducationIcon.innerHTML = `<span>&#8744;</span>`
+        educationDetails.style.display = "none"
+        educationsDetails = "true"
+        console.log(educationsDetails)
+    }   
+}
