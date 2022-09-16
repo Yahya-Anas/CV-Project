@@ -17,12 +17,29 @@ const date = document.getElementById("date")
 const driverLincensIcon = document.getElementById("simple-line-icons-driver-license")
 const driverLincen = document.getElementById("driver-license")
 
+//Personal Details Values
+
+const firstName = document.getElementById("first-name-value")
+const lastName = document.getElementById("last-name-value")
+const emailValue = document.getElementById("email-value")
+const phoneValue = document.getElementById("phone-value")
+const locationValue = document.getElementById("address-value")
+const postCodeValue = document.getElementById("post-code-value")
+const cityValue = document.getElementById("city-value")
+const dateValue = document.getElementById("date-value")
+const driverLincenValue = document.getElementById("driver-lincens-value")
+
+
 // Educatin Detaile Variable
 
 const educationDetails = document.getElementById("education-details")
 const spanEducationIcon = document.getElementById("span-education-icon")
+const displayEducationName = document.getElementById("education")
+const educationTitle = document.getElementById("education-title")
 
+//Education Details Values
 
+const educationName = document.getElementById("education-value")
 
 
 
@@ -42,92 +59,97 @@ let createPersonalDetails = () =>{
     }   
 }
 
-let crateFirstName = () =>{
-    let firstName = document.getElementById("first-name-value").value
-    displayFirstName.innerHTML = firstName;
-}
 
-let cratelastName = () =>{
-    let lastName = document.getElementById("last-name-value").value
-    displayLastName.innerHTML = lastName;
-}
+let crateFirstName =(event) => {
+    displayFirstName.innerHTML = event.target.value;
+  }
+firstName.addEventListener('change', crateFirstName)
 
-let crateEmail = () =>{
-    let emailValu = document.getElementById("email-value").value
-    if(emailValu === ""){
+let cratelastName = (event) =>{
+    displayLastName.innerHTML = event.target.value;
+}
+lastName.addEventListener('change', cratelastName)
+
+
+let crateEmail = (event) =>{
+    if(event.target.value === ""){
         console.log("ddddd")
         emailIcon.style.display = "none"
-        eMail.innerHTML = emailValu
+        eMail.innerHTML = event.target.value
     }else{
         console.log("fffff")
         emailIcon.style.display = "block"
-        eMail.innerHTML = emailValu
+        eMail.innerHTML = event.target.value
     }
 }
+emailValue.addEventListener('change', crateEmail)
 
-let cratePhone = () =>{
-    let phoneVlue = document.getElementById("phone-value").value
-   
-    if(phoneVlue === ""){
+let cratePhone = (event) =>{ 
+    if(event.target.value === ""){
         phoneIcon.style.display = "none"
-        phoneNumber.innerHTML = phoneVlue
+        phoneNumber.innerHTML = event.target.value
     }else{
         phoneIcon.style.display = "block"
-        phoneNumber.innerHTML = phoneVlue
+        phoneNumber.innerHTML = event.target.value
     }
 }
+phoneValue.addEventListener('change', cratePhone)
 
-let crateAddress = () =>{
-    let locationValue = document.getElementById("address-value").value
-    if(locationValue === ""){
+let crateAddress = (event) =>{
+    
+    if(event.target.value === ""){
         locationIcon.style.display = "none"
-        address.innerHTML = locationValue
+        address.innerHTML = event.target.value
     }else{
         locationIcon.style.display = "block"
-        address.innerHTML = locationValue
+        address.innerHTML = event.target.value
     }
 }
+locationValue.addEventListener('change', crateAddress)
 
-let cratePostCode = () =>{
-    let postCodeValue = document.getElementById("post-code-value").value
-    if(postCodeValue === ""){
-        postCode.innerHTML = postCodeValue
+let cratePostCode = (event) =>{
+    if(event.target.value === ""){
+        postCode.innerHTML = event.target.value
     }else{
         
-        postCode.innerHTML = postCodeValue
+        postCode.innerHTML = event.target.value
     }
 }
+postCodeValue.addEventListener('change', cratePostCode)
 
-let crateCity = () =>{
-    let cityValue = document.getElementById("city-value").value
-    if(cityValue === ""){
-        city.innerHTML = cityValue
+let crateCity = (event) =>{
+    
+    if(event.target.value === ""){
+        city.innerHTML = event.target.value
     }else{
-        city.innerHTML = cityValue
+        city.innerHTML = event.target.value
     }
 }
+cityValue.addEventListener('change', crateCity)
 
-let crateDate = () =>{
-    let dateValue = document.getElementById("date-value").value
-    if(dateValue === ""){
+let crateDate = (event) =>{
+    
+    if(event.target.value === ""){
         dateIcon.style.display = "none"
-        date.innerHTML = dateValue
+        date.innerHTML = event.target.value
     }else{
         dateIcon.style.display = "block"
-        date.innerHTML = dateValue
+        date.innerHTML = event.target.value
     }
 }
+dateValue.addEventListener('change', crateDate)
 
-let crateDriverLincens = () =>{
-    let driverLincenValue = document.getElementById("driver-lincens-value").value
-    if(driverLincenValue === ""){
-        driverLincenValue.style.display = "none"
-        driverLincen.innerHTML = driverLincenValue
+let crateDriverLincens = (event) =>{
+   
+    if(event.target.value === ""){
+        driverLincensIcon.style.display = "none"
+        driverLincen.innerHTML = event.target.value
     }else{
         driverLincensIcon.style.display = "block"
-        driverLincen.innerHTML = driverLincenValue
+        driverLincen.innerHTML = event.target.value
     }
 }
+driverLincenValue.addEventListener('change', crateDriverLincens)
 
 
 const image_input = document.getElementById("image-input");
@@ -156,3 +178,11 @@ let createPersonalEducation = () =>{
         console.log(educationsDetails)
     }   
 }
+
+let crateEducation = (event) =>{
+    educationTitle.style.display = "block"
+    displayEducationName.innerHTML = event.target.value
+}
+
+educationName.addEventListener('change', crateEducation)
+

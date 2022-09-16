@@ -22,7 +22,29 @@ body{
 
 .main-container{
     width: 50%;
+    height: 100vh;
+    overflow-y: scroll;
 }
+
+/* Scrollbar styles */
+.main-container::-webkit-scrollbar {
+    width: 8px;
+}
+    
+.main-container::-webkit-scrollbar-track {
+    background: #ffff; 
+}
+    
+.main-container::-webkit-scrollbar-thumb {
+    background: #888;  
+}
+    
+.main-container::-webkit-scrollbar-thumb:hover {
+    background: #555;  
+}
+
+
+
 
 .person-information{
     width: 100%;
@@ -166,6 +188,9 @@ body{
 .first-and-last-name{
     display: flex;
     gap: 0.5rem;
+    font-size: 1.5rem;
+    color: #ffff;
+    padding-bottom: 1rem;
 }
 
 .information-containt{
@@ -176,11 +201,19 @@ body{
 }
 
 .information-containt p{
-    padding-left: 1rem;
+    padding-left: 0.4rem;
 }
+
+
 
 .test{
     padding-left: 1rem;
+}
+
+.pesonal-details-tamplate{
+    width: 25%;
+    border: 1px solid;
+    height: 100vh;
 }
 
 .simple-line-icons{
@@ -238,5 +271,18 @@ body{
    border: none;
   }
 
+  .education-template{
+    width: 70%;
+    border: 1px solid;
+    padding: 1rem 2rem;
+  }
+  .education-template h4{
+    display: none;
+  }
+
+  .education-template-title{
+    display: flex;
+    justify-content: space-between;
+  }
 
 

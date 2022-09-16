@@ -39,17 +39,17 @@
                                 <div class="person-first-last-name">
                                     <div class="person-name">
                                         <label>First Name</label>
-                                        <input id="first-name-value" type="text" class="name" onchange="crateFirstName()">
+                                        <input id="first-name-value" type="text" class="name">
                                     </div>
                                     <div class="person-name">
                                         <label>last Name</label>
-                                        <input id="last-name-value" type="text" class="name" onchange="cratelastName()">
+                                        <input id="last-name-value" type="text" class="name">
                                     </div>
                                 </div>
                                 
                                 <div class="person-email">
                                     <label>E-mail</label>
-                                    <input id="email-value" type="email" class="email name" onchange="crateEmail()">
+                                    <input id="email-value" type="email" class="email name">
                                 </div> 
                             </div>
                         </div>
@@ -57,27 +57,27 @@
                         <div class="important-information">
                             <div class="important-information-containt">
                                 <label>Phone Number</label>
-                                <input id="phone-value" type="tel" class="input-information" onchange="cratePhone()">
+                                <input id="phone-value" type="tel" class="input-information">
                             </div>
                             <div class="important-information-containt">
                                 <label>Address</label>
-                                <input id="address-value" type="text" class="input-information" onchange="crateAddress()">
+                                <input id="address-value" type="text" class="input-information">
                             </div>
                             <div class="important-information-containt">
                                 <label>Post Code</label>
-                                <input id="post-code-value" type="text" class="input-information" onchange="cratePostCode()">
+                                <input id="post-code-value" type="text" class="input-information">
                             </div>
                             <div class="important-information-containt">
                                 <label>City</label>
-                                <input id="city-value" type="text" class="input-information" onchange="crateCity()">
+                                <input id="city-value" type="text" class="input-information">
                             </div>
                             <div class="important-information-containt">
                                 <label>Date of birth</label>
-                                <input id="date-value" type="date" class="input-information" onchange="crateDate()" >
+                                <input id="date-value" type="date" class="input-information">
                             </div>
                             <div class="important-information-containt">
                                 <label>Driver's license</label>
-                                <input id="driver-lincens-value" type="text" class="input-information"  onchange="crateDriverLincens()">
+                                <input id="driver-lincens-value" type="text" class="input-information">
                             </div>
                     </div>    
                     </form>
@@ -96,7 +96,7 @@
                         <div class="important-information">
                             <div class="important-information-containt">
                                 <label>Education</label>
-                                <input id="education-value" type="text" class="input-information" onchange="crateEducation()">
+                                <input id="education-value" type="text" class="input-information">
                             </div>
                             <div class="person-educatin-container">
                                 <div class="person-educatin">
@@ -131,14 +131,12 @@
                 </div>
             </section>
             <div class="line-style"></div>
+            
         </div>
      
         <section class="pdf-information">
-            <!-- <p id="display-first-name"></p> -->
             <div class="template">
                 <div class="header-template">
-                    <!-- <div id="app" class="cv-image"></div> -->
-                    <!-- <img id="img" src="../1 - PicturePeople Bochum-001 2.jpg" alt="dddd" class="cv-image"> -->
                     <div id="display-image" class="cv-image"></div>
                     <div class="header-container">
                         <div class="first-and-last-name">
@@ -153,32 +151,40 @@
                             <iconify-icon id="simple-line-icons-phone" class="simple-line-icons" icon="simple-line-icons:call-end"></iconify-icon>
                             <p id="phone"></p>
                         </div>
-                        
                         <div class="information-containt">
                             <iconify-icon id="simple-line-icons-location" class="simple-line-icons"  icon="simple-line-icons:location-pin"></iconify-icon>
                             <p id="address"></p>  
-                        </div>
-                        <div class="information-containt test">
                             <p id="postCode"></p>
                             <p id="city"></p>
-                        </div>
-                                             
-                        <div class="information-containt">
-                            <iconify-icon id="simple-line-icons-date" class="simple-line-icons" icon="simple-line-icons:calender"></iconify-icon>
-                            <p id="date"></p>
-                        </div>
-                        <div class="information-containt">
-                            <i id="simple-line-icons-driver-license" class="fa fa-car simple-line-icons"></i>
-                            <p id="driver-license"></p>  
-                        </div>
+                        </div> 
                     </div>
                 </div>
+            <div class="main-template">
+                <div class="education-template">
+                    <h4 id="education-title">Education</h4>
+                    <div class="education-template-title">
+                        <p id="education"></p>
+                        <p id="education-date-value"></p>
+                    </div>
+                    <p id="school-value"></p>
+                    <p id="description-value"></p>
+                </div>
+
             </div>
-        </section>
+        </section> 
+        
     </main>
 
    
-   
+    <!-- <div class="information-containt">
+        <iconify-icon id="simple-line-icons-date" class="simple-line-icons" icon="simple-line-icons:calender"></iconify-icon>
+        <p id="date"></p>
+    </div>
+    <div class="information-containt">
+        <i id="simple-line-icons-driver-license" class="fa fa-car simple-line-icons"></i>
+        <p id="driver-license"></p>  
+    </div>
+    </div> -->
    
 
     
