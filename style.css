@@ -285,4 +285,20 @@ body{
     justify-content: space-between;
   }
 
+  .start-end-date{
+   display: flex;
+   width: 7rem;
+   justify-content: space-between;
+   font-size: 0.9rem;
+  }
+
+  .simple-line-icons{
+    display: none;
+  }
+
+  .display-school-city{
+    display: flex;
+    gap: 0.3rem;
+  }
+
 

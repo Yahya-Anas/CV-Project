@@ -77,7 +77,7 @@
                             </div>
                             <div class="important-information-containt">
                                 <label>Driver's license</label>
-                                <input id="driver-lincens-value" type="text" class="input-information">
+                                <input id="driver-license-value" type="text" class="input-information">
                             </div>
                     </div>    
                     </form>
@@ -101,26 +101,26 @@
                             <div class="person-educatin-container">
                                 <div class="person-educatin">
                                     <label>School</label>
-                                    <input id="first-name-value" type="text" class="name" onchange="crateFirstName()">
+                                    <input id="school-value" type="text" class="name">
                                 </div>
                                 <div class="person-educatin">
                                     <label>City</label>
-                                    <input id="last-name-value" type="text" class="name" onchange="cratelastName()">
+                                    <input id="city-school-value" type="text" class="name">
                                 </div>
                             </div>
                             <div class="person-educatin-container">
                                 <div class="person-educatin">
                                     <label>Start date</label>
-                                    <input id="start-year-value" type="month" class="name" onchange="crateFirstName()">
+                                    <input id="start-year-value" type="month" class="name">
                                 </div>
                                 <div class="person-educatin">
                                     <label>End date</label>
-                                    <input id="end-year-value" type="month" class="name" onchange="cratelastName()">
+                                    <input id="end-year-value" type="month" class="name">
                                 </div>
                             </div>
                             <div class="important-information-containt">
                                 <label>Decription</label>
-                                <textarea id="Decription-value" type="text" class="input-Description"  onchange="crateDriverLincens()">
+                                <textarea id="description-value" type="text" class="input-Description">
                                 </textarea>
                             </div>
                             <div class="btn-done">
@@ -131,7 +131,6 @@
                 </div>
             </section>
             <div class="line-style"></div>
-            
         </div>
      
         <section class="pdf-information">
@@ -140,54 +139,58 @@
                     <div id="display-image" class="cv-image"></div>
                     <div class="header-container">
                         <div class="first-and-last-name">
-                            <h3 id="display-first-name"></h3>
-                            <h3 id="display-last-name"></h3>
+                            <h3 id="display-first-name-value"></h3>
+                            <h3 id="display-last-name-value"></h3>
                         </div>
                         <div class="information-containt">
                             <iconify-icon id="simple-line-icons-email" class="simple-line-icons" icon="simple-line-icons:envolope"></iconify-icon>
-                            <p id="email"></p>
+                            <p id="display-email-value"></p>
                         </div>
                         <div class="information-containt">
                             <iconify-icon id="simple-line-icons-phone" class="simple-line-icons" icon="simple-line-icons:call-end"></iconify-icon>
-                            <p id="phone"></p>
+                            <p id="display-phone-value"></p>
                         </div>
                         <div class="information-containt">
                             <iconify-icon id="simple-line-icons-location" class="simple-line-icons"  icon="simple-line-icons:location-pin"></iconify-icon>
-                            <p id="address"></p>  
-                            <p id="postCode"></p>
-                            <p id="city"></p>
+                            <p id="display-address-value"></p>  
+                            <p id="display-post-code-value"></p>
+                            <p id="display-city-value"></p>
                         </div> 
                     </div>
                 </div>
-            <div class="main-template">
-                <div class="education-template">
-                    <h4 id="education-title">Education</h4>
-                    <div class="education-template-title">
-                        <p id="education"></p>
-                        <p id="education-date-value"></p>
+                <div class="main-template">
+                    <div class="education-template">
+                        <h4 id="education-title">Education</h4>
+                        <div class="education-template-title">
+                            <p id="display-education-value"></p>
+                            <div class="start-end-date">
+                                <p id="display-start-year-value"></p>
+                                <p class="simple-line-icons" id="simple-line-icons">-</p>
+                                <p id="display-end-year-value"></p> 
+                            </div>
+                            
+                        </div>
+                        <div class="display-school-city">
+                            <p id="display-school-value"></p>
+                            <p id="display-city-school-value"></p>
+                        </div>
+                        <p id="display-description-value"></p>
                     </div>
-                    <p id="school-value"></p>
-                    <p id="description-value"></p>
                 </div>
-
             </div>
         </section> 
         
     </main>
 
-   
-    <!-- <div class="information-containt">
-        <iconify-icon id="simple-line-icons-date" class="simple-line-icons" icon="simple-line-icons:calender"></iconify-icon>
-        <p id="date"></p>
-    </div>
-    <div class="information-containt">
-        <i id="simple-line-icons-driver-license" class="fa fa-car simple-line-icons"></i>
-        <p id="driver-license"></p>  
-    </div>
-    </div> -->
-   
+     <!-- <div class="information-containt">
+                                <iconify-icon id="simple-line-icons-date" class="simple-line-icons" icon="simple-line-icons:calender"></iconify-icon>
+                                <p id="display-date-value"></p>
+                            </div>
+                            <div class="information-containt">
+                                <i id="simple-line-icons-driver-license" class="fa fa-car simple-line-icons"></i>
+                                <p id="display-driver-license-value"></p>  
+                            </div> -->
 
-    
     <script src="main.js"></script>
    
 </body>
