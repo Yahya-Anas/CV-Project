@@ -1,3 +1,7 @@
+// data
+
+eductaionData = [];
+
 // Personal Details Variable
 
 const personalDetails = document.getElementById("personal-details");
@@ -26,6 +30,9 @@ const phoneValue = document.getElementById("phone-value")
 const locationValue = document.getElementById("address-value")
 const postCodeValue = document.getElementById("post-code-value")
 const cityValue = document.getElementById("city-value")
+
+
+
 // const dateValue = document.getElementById("date-value")
 // const driverLincenValue = document.getElementById("driver-license-value")
 
@@ -33,13 +40,13 @@ const cityValue = document.getElementById("city-value")
 // Educatin Detaile Variable
 
 const educationDetails = document.getElementById("education-details")
-const spanEducationIcon = document.getElementById("span-education-icon")
+const spanEducationIcon = document.getElementById("span-employment-icon")
+const spanEmloymentIcon = document.getElementById("span-education-icon")
 const educationTitle = document.getElementById("education-title")
 const startYearValue = document.getElementById("start-year-value")
 const endYearValue = document.getElementById("end-year-value")
 const simpleLineIcons = document.getElementById("simple-line-icons")
 const descriptionValue = document.getElementById("description-value")
-
 
 
 //Education Details Values
@@ -53,6 +60,24 @@ const displaySchoolName = document.getElementById("display-school-value")
 const displayEducationName = document.getElementById("display-education-value")
 const displayCityValue = document.getElementById("display-city-school-value")
 const displayDescriptionValue = document.getElementById("display-description-value")
+
+
+const addEducation = document.getElementById("add-education-btn")
+const addEmploymet = document.getElementById("add-education-btnn")
+const saveEducation = document.getElementById("save-eduction-btn")
+const educationDataDom = document.getElementById("education-data")
+const editeducationDataDom = document.getElementById("edit-education-items")
+
+
+const templatePdf = document.getElementById('template-pdf')
+const pdfBtn = document.getElementById('pdf-btn')
+
+pdfBtn.addEventListener('click', () =>{
+    let result = document.getElementById('template-pdf').contentWindow;
+    result.focus()
+    result.print()
+    
+})
 
 
 let x = "true"
@@ -155,6 +180,81 @@ let createHeaderInformation = (event) => {
     }
   }
 
+const displayEducationForm = (e) => {
+    console.log(e);
+    addEducation.classList.toggle('e-details')
+    educationDetails.classList.toggle('e-details')
+}
+
+
+
+const displayEmplymentForm = (e) => {
+    console.log(e);
+    addEmploymet.classList.toggle('e-details')
+    educationDetails.classList.toggle('e-details')
+}
+
+const createEducationData = () => {
+    return eductaionData.map(item => ` <div class="education-template-title">
+            <p id="display-education-value">${item.education}</p>
+            <div class="start-end-date">
+                <p id="display-start-year-value">${item.startDate}</p>
+                <p class="simple-line-icons" id="simple-line-icons">-</p>
+                <p id="display-end-year-value">${item.endDate}</p> 
+            </div>
+            
+        </div>
+        <div class="display-school-city">
+            <p id="display-school-value">${item.school}</p>
+            <p id="display-city-school-value">${item.city}</p>
+        </div>
+        <p id="display-description-value">${item.description}</p>`) 
+} 
+
+
+const editEducationData = () => {
+                return eductaionData.map(item => ` 
+                <div class="display-education-template-title">
+                <div class="education-template-title">
+                    <p id="display-education-value">${item.education}</p>
+                </div>
+            <div class="display-school-city">
+                <p id="display-school-value">${item.school}</p>
+                <p id="display-city-school-value">${item.city}</p>
+            </div>
+            </div>`) 
+        } 
+
+const saveEducationHandler = (e) => {
+    e.preventDefault()
+    const education = e.target.querySelector("#education-value");
+    const school = e.target.querySelector("#school-value");
+    const city = e.target.querySelector("#city-school-value")
+    const startDate = e.target.querySelector("#start-year-value");
+    const endDate = e.target.querySelector("#end-year-value")
+    const description = e.target.querySelector("#description-value")
+    eductaionData.push({
+        education: education.value,
+        school: school.value,
+        city: city.value,
+        startDate: startDate.value,
+        endDate: endDate.value,
+        description: description.value
+    });
+    education.value = ""
+    school.value = ""
+    city.value = ""
+    startDate.value = ""
+    endDate.value = ""
+    description.value = ""
+
+   addEducation.classList.toggle('e-details');
+   educationDetails.classList.toggle('e-details');
+   educationDataDom.innerHTML = createEducationData()
+   editeducationDataDom.innerHTML = editEducationData()
+    return false;
+} 
+
 // Add event listener  
 firstName.addEventListener('change', createHeaderInformation)
 lastName.addEventListener('change', createHeaderInformation)
@@ -163,6 +263,8 @@ phoneValue.addEventListener('change', createHeaderInformation)
 locationValue.addEventListener('change', createHeaderInformation)
 postCodeValue.addEventListener('change', createHeaderInformation)
 cityValue.addEventListener('change', createHeaderInformation)
+addEducation.addEventListener('click', displayEducationForm)
+addEmploymet.addEventListener('click', displayEmplymentForm)
 // dateValue.addEventListener('change', createHeaderInformation)
 // driverLincenValue.addEventListener('change', createHeaderInformation)
 
@@ -171,53 +273,24 @@ cityValue.addEventListener('change', createHeaderInformation)
 
 let educationsDetails = "true"
 let createPersonalEducation = () =>{
-    educationDetails.classList.toggle('e-details')
-    if(educationsDetails === "true" ){
-        educationDetails.style.display = "block"
-        spanEducationIcon.innerHTML = `<span>&#8743;</span>`
-        educationsDetails = "false"
-        console.log(educationsDetails)
-    }else if(educationsDetails === "false"){
+    addEducation.classList.toggle('e-details');
+    if(addEducation.classList.contains("e-details")){
         spanEducationIcon.innerHTML = `<span>&#8744;</span>`
-        educationDetails.style.display = "none"
-        educationsDetails = "true"
-        console.log(educationsDetails)
+    }else {
+        spanEducationIcon.innerHTML = `<span>&#8743;</span>`
     }   
 }
 
-let crateEducation = (event) =>{
-    //create Education Name
-    if(displayEducationName.id === "display-" +`${event.target.id}`){
-        educationTitle.style.display = "block"
-        displayEducationName.innerHTML = event.target.value
-    //cretae School Name    
-    }else if(displaySchoolName.id === "display-" +`${event.target.id}`){
-        displaySchoolName.innerHTML = event.target.value
-    //create start date
-    }else if(displayStartDate.id === "display-" +`${event.target.id}`){
-        displayStartDate.innerHTML = event.target.value
-    //create end date
-    }else if(displayEndDate.id === "display-" +`${event.target.id}`){
-       if(event.target.value === ""){
-        displayEndDate.innerHTML = event.target.value
-        simpleLineIcons.style.display = "none"
-       }else{
-        displayEndDate.innerHTML = event.target.value
-        simpleLineIcons.style.display = "block"
-       }
-    }else if(displayCityValue.id === "display-" +`${event.target.id}`){
-        displayCityValue.innerHTML = event.target.value
-    }else if(displayDescriptionValue.id === "display-" +`${event.target.id}`){
-        displayDescriptionValue.innerHTML = event.target.value
-    }
-    
-    
+let employmetsDetails = "true"
+let createPersonalEmployment = () =>{
+    addEmploymet.classList.toggle('e-details');
+    if(addEmploymet.classList.contains("e-details")){
+        spanEmloymentIcon.innerHTML = `<span>&#8744;</span>`
+    }else {
+        spanEmloymentIcon.innerHTML = `<span>&#8743;</span>`
+    }   
 }
 
-educationName.addEventListener('change', crateEducation)
-schoolName.addEventListener('change', crateEducation)
-startYearValue.addEventListener('change', crateEducation)
-endYearValue.addEventListener('change', crateEducation)
-cityName.addEventListener('change', crateEducation)
-descriptionValue.addEventListener('change', crateEducation)
+educationDetails.addEventListener("submit", saveEducationHandler)
+
 

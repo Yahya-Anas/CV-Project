@@ -89,6 +89,13 @@ body{
     margin-bottom: 1rem;
 }
 
+.display-personal-containt{
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+
 .btn-information{
     width: 6%;
     border: 1px solid;
@@ -262,7 +269,7 @@ body{
     padding-top: 1rem;
   }
 
-  .btn-done button{
+  .btn-done-submit{
    background-color: #4314B6;
    width: 20%;
    text-align: center;
@@ -300,5 +307,14 @@ body{
     display: flex;
     gap: 0.3rem;
   }
+
+  .display-education-template-title{
+    border: 1px solid black;
+    margin-bottom: 1rem;
+    border-radius: 0.4rem;
+    padding-left: 0.4rem;
+  }
+
+  
 
 

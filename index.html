@@ -77,7 +77,7 @@
                             </div>
                             <div class="important-information-containt">
                                 <label>Driver's license</label>
-                                <input id="driver-license-value" type="text" class="input-information">
+                                <input id="driver-license-value" type="text" class="input-information" >
                             </div>
                     </div>    
                     </form>
@@ -89,10 +89,15 @@
                     <div class="personal-containt">
                         <h3>Education</h3>
                         <button class="btn-information" onclick="createPersonalEducation()">
-                            <span id="span-education-icon">&#8744;</span>
+                            <span id="span-employment-icon">&#8744;</span>
                         </button> 
                     </div>
-                    <form id="education-details" class="education-form e-details" onsubmit="return false">
+                    <div class="display-personal-containt">
+                        <div id="edit-education-items"></div>
+                        <button id="add-education-btn" class="e-details">+ Add Education</button>
+                    </div>
+                   
+                    <form id="education-details" class="education-form e-details">
                         <div class="important-information">
                             <div class="important-information-containt">
                                 <label>Education</label>
@@ -120,21 +125,70 @@
                             </div>
                             <div class="important-information-containt">
                                 <label>Decription</label>
-                                <textarea id="description-value" type="text" class="input-Description">
-                                </textarea>
+                                <textarea id="description-value" type="text" class="input-Description"></textarea>
                             </div>
                             <div class="btn-done">
-                                <button>Done</button>
+                                <input type="submit" value="Done" class="btn-done-submit">
                             </div>
                         </div>    
                     </form>
                 </div>
             </section>
             <div class="line-style"></div>
+            <section class="person-information">
+                <div class="person-information-containt">
+                    <div class="personal-containt">
+                        <h3>Employment</h3>
+                        <button class="btn-information" onclick="createPersonalEmployment()">
+                            <span id="span-education-icon">&#8744;</span>
+                        </button> 
+                    </div>
+                    <div class="display-personal-containt">
+                        <div id="edit-education-items"></div>
+                        <button id="add-education-btnn" class="e-details">+ Add Education</button>
+                    </div>
+                   
+                    <form id="education-details" class="education-form e-details">
+                        <div class="important-information">
+                            <div class="important-information-containt">
+                                <label>Education</label>
+                                <input id="education-value" type="text" class="input-information">
+                            </div>
+                            <div class="person-educatin-container">
+                                <div class="person-educatin">
+                                    <label>School</label>
+                                    <input id="school-value" type="text" class="name">
+                                </div>
+                                <div class="person-educatin">
+                                    <label>City</label>
+                                    <input id="city-school-value" type="text" class="name">
+                                </div>
+                            </div>
+                            <div class="person-educatin-container">
+                                <div class="person-educatin">
+                                    <label>Start date</label>
+                                    <input id="start-year-value" type="month" class="name">
+                                </div>
+                                <div class="person-educatin">
+                                    <label>End date</label>
+                                    <input id="end-year-value" type="month" class="name">
+                                </div>
+                            </div>
+                            <div class="important-information-containt">
+                                <label>Decription</label>
+                                <textarea id="description-value" type="text" class="input-Description"></textarea>
+                            </div>
+                            <div class="btn-done">
+                                <input type="submit" value="Done" class="btn-done-submit">
+                            </div>
+                        </div>    
+                    </form>
+                </div>
+            </section>
         </div>
      
         <section class="pdf-information">
-            <div class="template">
+            <div class="template" id="template-pdf">
                 <div class="header-template">
                     <div id="display-image" class="cv-image"></div>
                     <div class="header-container">
@@ -161,27 +215,16 @@
                 <div class="main-template">
                     <div class="education-template">
                         <h4 id="education-title">Education</h4>
-                        <div class="education-template-title">
-                            <p id="display-education-value"></p>
-                            <div class="start-end-date">
-                                <p id="display-start-year-value"></p>
-                                <p class="simple-line-icons" id="simple-line-icons">-</p>
-                                <p id="display-end-year-value"></p> 
-                            </div>
-                            
-                        </div>
-                        <div class="display-school-city">
-                            <p id="display-school-value"></p>
-                            <p id="display-city-school-value"></p>
-                        </div>
-                        <p id="display-description-value"></p>
+                        <div id="education-data">
+
+                        </div>                 
                     </div>
                 </div>
             </div>
         </section> 
-        
+       
     </main>
-
+    <button id="pdf-btn">pdf</button>
      <!-- <div class="information-containt">
                                 <iconify-icon id="simple-line-icons-date" class="simple-line-icons" icon="simple-line-icons:calender"></iconify-icon>
                                 <p id="display-date-value"></p>
